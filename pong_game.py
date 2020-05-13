@@ -13,12 +13,11 @@ ventana=Screen()
 ventana.title("Pong by @chema")
 ventana.bgcolor("black")  # ventana con fondo negro
 ventana.setup(800,600)  # tamaño de la ventana
-ventana.tracer(0)  # maximo de velocidad de renderizado en turtle. En mi equipo iba muy rapida la bola
-# asi que tuve que activar el tracer y ponerle un retraso de 2
+ventana.tracer(0)  # maximo de velocidad de renderizado en turtle.
 # .tracer(n=None, delay=None) Si ponemos n en cero o off, hace que la tortuga desaparecezca y que comandos como
 # setx,sety o goto vayan muchisimo mas rapido. El segundo argumento establece el retraso.
 
-# Score - Establece los marcadores a cero a comienzo del partido.
+# Score - Establece los marcadores a cero a comienzo de la partida.
 score_a=0
 score_b=0
 
