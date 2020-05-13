@@ -8,7 +8,7 @@ from time import sleep, process_time # para regular la velocidad.
 
 velocidad=0.02
 
-# wn es una ventana de turtle
+# ventana donde se desarrollara el juego. 
 ventana=Screen()
 ventana.title("Pong by @chema")
 ventana.bgcolor("black")  # ventana con fondo negro
