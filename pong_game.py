@@ -144,7 +144,7 @@ while True:
         marcador.clear()
         marcador.write(f"Player A: {score_a}  |  Player B: {score_b}", align="center", font=(30))
         
-    # Colisiones de palas y bola
+    # COLISIONES DE PALAS Y BOLAS
     if (bola.xcor()>340 and bola.xcor()<350) and (bola.ycor()<pala_b.ycor()+50 and \
                                                  bola.ycor()>pala_b.ycor()-50):
         bola.setx(340)
@@ -160,16 +160,15 @@ while True:
         bola.dx*=-1
         os.system("aplay golpe_pala.wav&")
     
-    # Aumento de velocidad cada +- 10 segundos
-    # print(process_time()-tiempo1)
+    # Aumento de velocidad cada +- 6 segundos
+    
     if (process_time()-tiempo1) > 0.3: # Regula cada cuanto tiempo se aumentara la velocidad
                                         # a mayor numero mas tiempo tarda en cambiar la velocidad.
         velocidad-= 0.001 #como cada vez el retardo es menor, la velocidad es mayor por tanto.
         tiempo1=process_time()
         if velocidad<0.005:
             velocidad=0.005 # limita la velocidad a un minimo, para que sea jugable.
-        print(velocidad)
-        
+               
     # El primer jugador que llega a 10 puntos gana.
     if score_a==10 or score_b==10:
         if score_a>score_b:
